@@ -1,1 +1,1 @@
-# hangman
+# self_taught
