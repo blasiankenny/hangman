@@ -1,0 +1,11 @@
+.gaming {
+    background-color: rgb(225, 225, 225);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.is-toggled {
+    background-color: black;
+    color: white;
+}

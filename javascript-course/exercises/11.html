@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+
+    <script>
+
+        const nums = [1, 2, 3, 4, 5, 6, 7];
+
+        nums[2] = 40;
+
+        console.log(nums);
+
+        function getLastValue(array) {
+            return array[array.length - 1];
+        }
+        console.log(getLastValue(nums));
+
+        function arraySwap(array) {
+            const temp = array[0];
+            array[0] = array[array.length - 1];
+            array[array.length - 1] = temp;
+            return array;
+        }
+
+        console.log(arraySwap(nums));
+
+
+        const nums2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        for (let i = 0; i < nums2.length; i += 2) {
+            console.log(nums2[i]);
+        }
+
+        for (let i = 5; i >= 0; i--) {
+            console.log(i);
+        }
+
+        let i = 0;
+
+        while (i < nums2.length) {
+            nums2[i] *= 2;
+            i++
+        }
+
+        console.log(nums2);
+
+
+
+        function addOne(array) {
+
+            for (let i = 0; i < array.length; i++) {
+                array[i]++;
+            }
+            console.log(array);
+        }
+
+        addOne(nums2);
+
+
+
+
+        function minMax(nums) {
+
+            if (nums === []) {
+                return { min: null, max: null };
+            }
+
+            let min = nums[0];
+            let max = nums[0];
+
+            for (let i = 0; i < nums.length; i++) {
+                if (min > nums[i]) {
+                    min = nums[i];
+                } else if (max < nums[i]) {
+                    max = nums[i];
+                }
+            }
+
+            return { min: min, max: max };
+        }
+
+
+        console.log(minMax(nums2));
+
+        console.log(minMax([]))
+
+
+
+        function countWords(words){
+
+            let obj = {};
+
+
+            for(let i = 0; i < words.length; i++){
+
+                const word = words[i];
+                if(!obj[word]){
+                    obj[word] = 1; 
+                }else{
+                    obj[word]++;
+                }
+
+            }
+
+            return obj;
+
+        }
+
+        console.log(countWords(['apple','apple','banana']));
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+
+    <script>
+
+        let arr = ['hello','search', 'world', 'search', 'good','search'];
+        let arr2 = ['not', 'found'];
+
+        function search(arr) {
+            for (let i = 0; i < arr.length; i++) {
+
+                if (arr[i] === 'search') {
+                    console.log(i);
+                    break;
+                }
+                else if (i == arr.length - 1) {
+                    console.log(-1);
+                }
+            }
+        }
+
+        search(arr);
+        search(arr2);
+
+
+        function findIndex(array, word) {
+
+            for (let i = 0; i < array.length; i++) {
+
+                if (array[i] === word) {
+                    return i;
+                }
+                
+            }
+            return -1;
+        }
+
+        function unique(array){
+
+            const result = [];
+
+            for(let i = 0; i < array.length; i++){
+                
+                if(findIndex(result,array[i]) === -1){
+                    result.push(array[i]);
+                }
+            }
+
+            return result;
+        }
+
+
+
+        console.log(findIndex(arr,'cat'));
+
+        console.log(unique(['hello','search', 'world', 'search', 'good','search']));
+
+
+        function removeEgg(foods){
+            
+            for(let i = 0; i < foods.length; i++){
+                
+                if(foods[i] === 'egg')
+                    foods.splice(i,1);
+            }
+
+            return foods
+        }
+
+        console.log(removeEgg(['egg','apple','egg','egg','ham']));
+
+        function removeEgg2(foods){
+            
+            let eggsRemoved = 0;
+            const result = [];
+            const reversedFoods = foods.slice().reverse();
+            console.log(reversedFoods);
+            
+            for(let i = 0; i < reversedFoods.length; i++){
+                
+                if(reversedFoods[i] === 'egg' && eggsRemoved < 2){                
+                    eggsRemoved += 1;
+                    continue;
+                    
+                }
+                result.push(reversedFoods[i]);
+
+            }
+            
+
+            return result.reverse()
+        }
+        const foods = ['egg','apple','egg','egg','ham'];
+        console.log(removeEgg2(foods));
+        console.log(foods);
+
+
+        
+
+        for(let i = 1; i<21; i++){
+
+            if(i%3 === 0 && i%5 === 0){
+                console.log('FizzBuzz');
+            } else if(i%3 === 0){
+                console.log('Fizz');
+            } else if (i%5 === 0){
+                console.log('Buzz');
+            } else {
+                console.log(i);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
