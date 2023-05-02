@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lesson 14</title>
+    <style>
+        body {
+            height: 3000px;
+
+        }
+
+        .background {
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .elem1 {
+            position: fixed;
+            background-color: black;
+            color: white;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .elem2 {
+            position: fixed;
+            background-color: green;
+            color: white;
+            right: 0;
+            width: 100px;
+            top: 0;
+            bottom: 0;
+        }
+
+        .top {
+            background-color: white;
+            width: 300px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-radius: 5px;
+        }
+
+        .title {
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .modal {
+            margin-bottom: 15px;
+
+        }
+
+        .close {
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(213, 213, 213);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="elem2">right sidebar</div>
+    </div>
+    <div class="background">
+        <div class="top">
+            <div class="title">Modal Title</div>
+            <div class="modal">This is a modal</div>
+            <butoton class="close">Close</button>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
